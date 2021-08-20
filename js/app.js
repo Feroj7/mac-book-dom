@@ -1,4 +1,4 @@
-//memory button event handler and extra memory cost update
+// memory button event handler and extra memory cost update
 const memoryButton1 = document.getElementById('memory-btn1');
 memoryButton1.addEventListener('click', function(){
     const memoryPrice = document.getElementById('memory-price');
