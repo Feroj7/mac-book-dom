@@ -32,7 +32,7 @@ storageButton3.addEventListener('click', function(){
     calculateTotal();
 })
 
-//delivery button even handler and delivery cost update
+//delivery button event handler and delivery cost update
 const deliveryButton1 = document.getElementById('delivery-btn1');
 deliveryButton1.addEventListener('click', function(){
     const deliveryPrice = document.getElementById('delivery-price');
@@ -52,8 +52,9 @@ function calculateTotal(){
     const memoryPrice = document.getElementById('memory-price').innerText;
     const storagePrice = document.getElementById('storage-price').innerText;
     const deliveryCharge = document.getElementById('delivery-price').innerText;
+    //calculate total cost
     const totalCost = parseInt(bestPrice) + parseInt(memoryPrice) + parseInt(storagePrice) + parseInt(deliveryCharge);
-    
+    //update in UI
     const totalPrice = document.getElementById('total-price');
     totalPrice.innerText = totalCost;
     const grandTotal = document.getElementById('grand-total');
@@ -68,6 +69,7 @@ function applyPromoCode(){
     if(inputField.value == 'stevekaku'){
         grandTotal.innerText = totalPrice.innerText - parseFloat(totalPrice.innerText * (20/100));
     }
+    //clear promo input field
     inputField.value = '';
 }
 
