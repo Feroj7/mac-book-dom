@@ -62,10 +62,11 @@ function calculateTotal(){
 //promo code apply function and give discount 
 function applyPromoCode(){
     const inputField = document.getElementById('input-field');
+    const totalPrice = document.getElementById('total-price');
     const grandTotal = document.getElementById('grand-total');
     // promo code check condition 
     if(inputField.value == 'stevekaku'){
-        grandTotal.innerText = grandTotal.innerText - parseFloat(grandTotal.innerText * (20/100));
+        grandTotal.innerText = totalPrice.innerText - parseFloat(totalPrice.innerText * (20/100));
     }
     inputField.value = '';
 }
